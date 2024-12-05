@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box; /* Ensure padding and borders are included in size */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('glitchbg.jpg');
+  background-repeat: repeat;
+  background-size: 800px 800px;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header h1 {
+  font-family: "Courier New", monospace;
+  font-size: 28px;
+  color: #13B4BA;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.quiz-container {
+  background-color: transparent;
+  margin: 15px auto;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+.question {
+  margin-bottom: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.question p {
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #13B4BA;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px; /* Fixed padding */
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+label:hover {
+  box-shadow: 0 0 10px #13B4BA, 0 0 20px #DDA0DD;
+  transform: scale(1.05);
+}
+
+button {
+  padding: 8px 16px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  border: none;
+  background-color: #13B4BA;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  display: block;
+  margin: 15px auto;
+}
+
+button:hover {
+  background-color: #0D919E;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+#quiz-result {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border: 2px solid #13B4BA;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+#result-image {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#quiz-result h2 {
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  color: #13B4BA;
+  margin-bottom: 8px;
+}
+
+#quiz-result p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-bar-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #13B4BA;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .quiz-container {
+    width: 95%; /* Reduce width for smaller screens */
+    padding: 10px;
+    font-size: 12px; /* Adjust font size */
+  }
+
+  header h1 {
+    font-size: 22px; /* Smaller title */
+    margin-bottom: 15px;
+  }
+
+  .question p {
+    font-size: 14px; /* Adjust question font size */
+  }
+
+  label {
+    font-size: 12px; /* Adjust label size */
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  #result-image {
+    max-width: 100%; /* Ensure image fits in smaller screens */
+  }
+
+  #quiz-result h2 {
+    font-size: 18px;
+  }
+
+  #quiz-result p {
+    font-size: 14px;
+  }
+
+  .progress-bar {
+    height: 6px; /* Slightly smaller progress bar */
+  }
+}
